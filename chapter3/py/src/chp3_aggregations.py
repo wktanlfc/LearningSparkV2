@@ -13,7 +13,7 @@ spark = (SparkSession
        .appName("Aggregations and Computations in Spark Exercise - Chapter 3")
        .getOrCreate())
 # ?Create a DataFrame using the schema defined above
-sf_fire_datasets = "/Users/admin/Desktop/LearningSparkV2/databricks-datasets/learning-spark-v2/sf-fire/sf-fire-calls.csv"
+# sf_fire_datasets = "/Users/admin/Desktop/LearningSparkV2/databricks-datasets/learning-spark-v2/sf-fire/sf-fire-calls.csv"
 
 
 #StructType Parameter with a List of StructField() methods per column.

@@ -17,7 +17,7 @@ for dirpath,dirnames,file in os.walk(curr_path):
     if "databricks-datasets/learning-spark-v2/sf-airbnb" in dirpath and 'lr-pipeline-model' not in dirpath:
         try: 
             df = spark.read.format("parquet").load(dirpath)
-            print(dirpath)
+            print(f"path read is from {dirpath}")
         except:
             "File Wrong Error"
             
@@ -29,5 +29,5 @@ df.printSchema()
 df.createOrReplaceTempView("temp_tbl")
 
 spark.sql("""
-          select host_is_superhost from temp_tbl
+          select * from temp_tbl limit 100
           """)
